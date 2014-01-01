@@ -59,16 +59,6 @@ set laststatus=2
 set runtimepath=/usr/share/vim/vim74
 let $VIMRUNTIME="/usr/share/vim/vim74"
 
-
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#Complete
-"autocmd FileType ruby set omnifunc=rubycomplete#Complete
-
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>  
 set nocp
 
@@ -81,6 +71,14 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
+
+Bundle "tpope/vim-surround"
+
+Bundle "SirVer/ultisnips"
+
+Bundle "scrooloose/syntastic"
+
+Bundle "tpope/vim-repeat"
 
 filetype plugin indent on     " required!
