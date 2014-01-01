@@ -44,22 +44,38 @@ syntax on
 "set incsearch        " Incremental search
 "set autowrite        " Automatically save before commands like :next and :make
 "set hidden             " Hide buffers when they are abandoned
-set mouse=a        " Enable mouse usage (all modes)
+
+" enable mouse
+set mouse=a
+
+" highlight search results
 set hlsearch
+
+" set line numbers
 set nu
+
+" set colorscheme
 colorscheme blackbeauty
+
+" set indentation
 set autoindent
 set ai
 set shiftwidth=2
 set tabstop=2
 set expandtab
+
+" display status bar
 set statusline=%F%m%r%h%w\ -----------------------------------------------------------------------------------------------\ [\ Format=%{&ff}\ ]\ [\ Filetype=%Y\ ]\ [\ ASCII=\%03.3b\ ]\ [\ Pos=%04l,\ %04v\ ]\ [\ %p%%\ ]\ [\ Length=%L\ ]
 set laststatus=2
 
+" set vim runtime
 set runtimepath=/usr/share/vim/vim74
 let $VIMRUNTIME="/usr/share/vim/vim74"
 
+" ctags config
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>  
+
+" Vundle setups
 set nocp
 
 filetype off  " required
